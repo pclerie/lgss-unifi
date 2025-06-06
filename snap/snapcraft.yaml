@@ -1,20 +1,34 @@
-name: unifi-unofficial
+name: lgss-unifi
 adopt-info: unifi
 summary: Unifi Network controller software.
 description: |
-  Unofficial snap package of the Unifi Network controller software.
-base: core20
+  Unofficial snap package of the Unifi Network Application software.
+
+  Ubiquiti UniFi server is a centralized management system for UniFi suite of
+  devices. After the UniFi server is installed, the UniFi Network application
+  can be accessed on any web browser. The UniFi Network application allows the
+  operator to instantly provision thousands of UniFi devices, map out network
+  topology, quickly manage system traffic, and further provision individual
+  UniFi devices.
+base: core24
 confinement: strict
 grade: stable
-architectures:
- - build-on: amd64
+platforms:
+  amd64:
+  arm64:
 
 package-repositories:
   - type: apt
     components: [ubiquiti]
-    suites: [unifi-7.2]
+    suites: [stable]
     key-id: 4A228B2D358A5094178285BE06E85760C0A52C50
     url: https://www.ui.com/downloads/unifi/debian
+
+  - type: apt
+    components: [multiverse]
+    suites: [noble/mongodb-org/8.0]
+    key-id: 4B0752C1BCA238C0B4EE14DC41DE058A4E7DCA05
+    url: https://repo.mongodb.org/apt/ubuntu
 
 layout:
    /usr/lib/unifi/bin:
@@ -48,12 +62,11 @@ apps:
 
 parts:
   unifi:
-    plugin: dump
-    source: .
+    plugin: nil
     build-packages:
       - ca-certificates-java
     stage-packages:
-      - openjdk-8-jre-headless
+      - openjdk-17-jre-headless
       - unifi
     override-build: |
       snapcraftctl build
