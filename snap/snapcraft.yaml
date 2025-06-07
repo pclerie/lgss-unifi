@@ -75,6 +75,7 @@ parts:
       snapcraftctl set-version $VER
     override-prime: |
       snapcraftctl prime
+      rm -f usr/lib/jvm/java-17-openjdk-*/lib/security/cacerts
       ln -sf /snap/$SNAPCRAFT_PROJECT_NAME/current/usr/bin/mongod \
         $SNAPCRAFT_PRIME/usr/lib/unifi/bin/mongod
   scripts:
