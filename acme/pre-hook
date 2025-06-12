@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Let's Encrypt renewal hook to deploy certificate to the Unifi Nework App Java Keystore.
+
+CERT_PATH=/etc/letsencrypt/live/$(hostname --fqdn)
+UNIFI_DATA=/var/snap/lgss-unifi/current/data
+
+# Copy certificate and key to Unifi data directory
+cp ${CERT_PATH}/fullchain.pem ${UNIFI_DATA}/fullchain.pem
+cp ${CERT_PATH}/privkey.pem ${UNIFI_DATA}/privkey.pem
+
+# Stop the Unifi Controller
+systemctl stop snap.lgss-unifi.unifi.service

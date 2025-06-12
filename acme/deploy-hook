@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Import the certificate into the keystore
+/snap/bin/lgss-unifi.deploy-certificate > /dev/null 2>&1

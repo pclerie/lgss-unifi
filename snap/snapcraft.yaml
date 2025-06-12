@@ -33,8 +33,6 @@ package-repositories:
 layout:
    /usr/lib/unifi/bin:
      bind: $SNAP/usr/lib/unifi/bin
-   /usr/lib/unifi/conf:
-     bind: $SNAP/usr/lib/unifi/conf
    /usr/lib/unifi/dl:
      bind: $SNAP/usr/lib/unifi/dl
    /usr/lib/unifi/lib:
@@ -60,6 +58,11 @@ apps:
       - network-bind
       - network-observe
 
+  deploy-certificate:
+    command: bin/unifi_deploy_certificate.sh
+    plugs:
+      - network
+
 parts:
   unifi:
     plugin: nil
@@ -78,8 +81,17 @@ parts:
       rm -f usr/lib/jvm/java-17-openjdk-*/lib/security/cacerts
       ln -sf /snap/$SNAPCRAFT_PROJECT_NAME/current/usr/bin/mongod \
         $SNAPCRAFT_PRIME/usr/lib/unifi/bin/mongod
-  scripts:
+
+  launcher:
     plugin: dump
-    source: scripts
+    source-type: file
+    source: scripts/launcher.sh
     organize:
       launcher.sh: bin/launcher.sh
+
+  deploy-certificate:
+    plugin: dump
+    source-type: file
+    source: scripts/unifi_deploy_certificate.sh
+    organize:
+      unifi_deploy_certificate.sh: bin/unifi_deploy_certificate.sh

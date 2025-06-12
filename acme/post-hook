@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Restart the Unifi Controller
+systemctl start snap.lgss-unifi.unifi.service
+
+# Clean up
+rm ${UNIFI_DATA}/privkey.pem
+rm ${UNIFI_DATA}/fullchain.pem
