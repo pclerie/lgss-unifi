@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.2.0 - 2025-06-17
+#### Features
+- Add script to import certificate to keystore - (55a3541) - Philippe Clérié
+#### Miscellaneous Chores
+- Update to acme/README.md - (869dd10) - Philippe Clérié
+- Matched original license text - (dc0f79c) - Philippe Clérié
+- Fit logo image to max size allowed by Snap Store - (ee2a0cd) - Philippe Clérié
+
+- - -
+
 ## 0.1.0 - 2025-06-07
 #### Bug Fixes
 - Fix incorrect link markdown syntax in README - (78635c1) - Philippe Clérié
