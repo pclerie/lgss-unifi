@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.3.0 - 2025-06-17
+#### Features
+- Upgrade controller to 9.2.87.0 - (8c6cb89) - Philippe Clérié
+
+- - -
+
 ## 0.2.0 - 2025-06-17
 #### Features
 - Add script to import certificate to keystore - (55a3541) - Philippe Clérié
