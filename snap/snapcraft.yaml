@@ -1,5 +1,6 @@
 name: lgss-unifi
 adopt-info: unifi
+license: BSD-3-Clause
 summary: Unifi Network controller software.
 description: |
   Unofficial snap package of the Unifi Network Application software.
