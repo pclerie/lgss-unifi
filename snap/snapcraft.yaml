@@ -16,7 +16,9 @@ confinement: strict
 grade: stable
 platforms:
   amd64:
-  #arm64:
+  arm64:
+    build-on: arm64
+    build-for: arm64
 
 package-repositories:
   - type: apt
