@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.4.0 - 2025-08-03
+#### Features
+- Upgrade controller to 9.3.45.0 - (7d26204) - Philippe Clérié
+- Enable building for Raspberry Pi (ARM 64) - (acadbd6) - Philippe Clérié
+- Add license key and SPDX identifier - (2afacc8) - Philippe Clérié
+
+- - -
+
 ## 0.3.0 - 2025-06-17
 #### Features
 - Upgrade controller to 9.2.87.0 - (8c6cb89) - Philippe Clérié
