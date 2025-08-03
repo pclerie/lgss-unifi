@@ -6,6 +6,12 @@ The latest version of the controller also required an upgrade to *JDK 17*. In th
 
 ## Updates
 
+### Tag 0.4 - Upgrade to Unifi 9.3.45.0 (30-Jul-2025)
+
+Version 9.3.45 was uploaded to the repository. There was an earlier 9.3.43, published earlier this month which never made it to the repository, which is why it was not snapped.
+
+This release will also add a ARM64 build specifically for the **Raspberry Pi 5**. I finally acquired a Pi 5 to test it. I got the *8GB* version, but I see no reason why it would not run on the *2GB*. 
+
 ### Tag 0.3 - Upgrade to Unifi 9.2.87.0 (17-Jun-2025)
 
 When I uploaded an update earlier today, I was taken by surprise when Snapcraft returned with a new version of the controller, that I was not aware of. It turns out that I had not realized that I needed to `snapcraft clean` more often. Teething problems one might say.
