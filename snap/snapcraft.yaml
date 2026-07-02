@@ -25,7 +25,8 @@ package-repositories:
     components: [ubiquiti]
     suites: [stable]
     key-id: 4A228B2D358A5094178285BE06E85760C0A52C50
-    url: https://www.ui.com/downloads/unifi/debian
+    #url: https://www.ui.com/downloads/unifi/debian
+    url: https://dl.ui.com/unifi/debian
 
   - type: apt
     components: [multiverse]
