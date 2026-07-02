@@ -77,7 +77,7 @@ parts:
     build-packages:
       - ca-certificates-java
     stage-packages:
-      - openjdk-17-jre-headless
+      - openjdk-25-jre-headless
       - unifi
     override-build: |
       snapcraftctl build
@@ -86,7 +86,7 @@ parts:
       snapcraftctl set-version $VER
     override-prime: |
       snapcraftctl prime
-      rm -f usr/lib/jvm/java-17-openjdk-*/lib/security/cacerts
+      rm -f usr/lib/jvm/java-25-openjdk-*/lib/security/cacerts
       ln -sf /snap/$SNAPCRAFT_PROJECT_NAME/current/usr/bin/mongod \
         $SNAPCRAFT_PRIME/usr/lib/unifi/bin/mongod
 

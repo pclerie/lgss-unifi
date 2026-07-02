@@ -1,6 +1,6 @@
 #! /bin/sh
 
-${SNAP}/usr/lib/jvm/java-17-openjdk-${SNAP_ARCH}/bin/java \
+${SNAP}/usr/lib/jvm/java-25-openjdk-${SNAP_ARCH}/bin/java \
   -Dfile.encoding=UTF-8 \
   -Djava.awt.headless=true \
   -Dapple.awt.UIElement=true \
