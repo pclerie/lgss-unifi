@@ -103,3 +103,85 @@ parts:
     source: scripts/unifi_deploy_certificate.sh
     organize:
       unifi_deploy_certificate.sh: bin/unifi_deploy_certificate.sh
+
+lint:
+  ignore:
+    - gpu:
+      - usr/lib/x86_64-linux-gnu/dri/libdril_dri.so
+      - usr/lib/x86_64-linux-gnu/gbm/dri_gbm.so
+      - usr/lib/x86_64-linux-gnu/libGLX_mesa.so.*
+      - usr/lib/x86_64-linux-gnu/libdrm_amdgpu.so.*
+      - usr/lib/x86_64-linux-gnu/libdrm_intel.so.*
+#      - usr/lib/x86_64-linux-gnu/lib.so.*
+#      - usr/lib/x86_64-linux-gnu/lib.so.*
+
+    - library:
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libattach.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libawt.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libawt_headless.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libdt_socket.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libextnet.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libfontmanager.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libinstrument.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libj2gss.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libj2pcsc.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libj2pkcs11.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjaas.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjavajpeg.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjawt.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjdwp.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjimage.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjsig.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjsound.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjsvml.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libawt_xawt.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/liblcms.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libmanagement.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libmanagement_agent.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libmanagement_ext.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libmlib_image.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libnet.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libnio.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libprefs.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/librmi.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libsaproc.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libsctp.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libsimdsort.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libsplashscreen.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libsyslookup.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libverify.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libzip.so
+      - usr/lib/jvm/java-25-openjdk-amd64/lib/libjava.so
+
+      - usr/lib/x86_64-linux-gnu/libGL.so.*
+      - usr/lib/x86_64-linux-gnu/libGLX.so.*
+      - usr/lib/x86_64-linux-gnu/libGLX_mesa.so.*
+      - usr/lib/x86_64-linux-gnu/libGLdispatch.so.*
+      - usr/lib/x86_64-linux-gnu/libXtst.so.*
+      - usr/lib/x86_64-linux-gnu/libasound.so.*
+      - usr/lib/x86_64-linux-gnu/libcolordprivate.so.*
+      - usr/lib/x86_64-linux-gnu/libdconf.so.*
+      - usr/lib/x86_64-linux-gnu/libfreebl3.so
+      - usr/lib/x86_64-linux-gnu/libfreeblpriv3.so
+      - usr/lib/x86_64-linux-gnu/libgif.so.*
+      - usr/lib/x86_64-linux-gnu/libicuio.so.*
+      - usr/lib/x86_64-linux-gnu/libicutest.so.*
+      - usr/lib/x86_64-linux-gnu/libicutu.so.*
+      - usr/lib/x86_64-linux-gnu/libicui18n.so.*
+      - usr/lib/x86_64-linux-gnu/libnss3.so
+      - usr/lib/x86_64-linux-gnu/libnssutil3.so
+      - usr/lib/x86_64-linux-gnu/libnssckbi.so
+      - usr/lib/x86_64-linux-gnu/libnssdbm3.so
+      - usr/lib/x86_64-linux-gnu/libsmime3.so
+      - usr/lib/x86_64-linux-gnu/libsoftokn3.so
+      - usr/lib/x86_64-linux-gnu/libssl3.so
+      - usr/lib/x86_64-linux-gnu/libvulkan.so.*
+      - usr/lib/x86_64-linux-gnu/libXxf86vm.so.*
+      - usr/lib/x86_64-linux-gnu/libxcb-glx.so.*
+      - usr/lib/x86_64-linux-gnu/libplc4.so
+      - usr/lib/x86_64-linux-gnu/libplds4.so
+      - usr/lib/x86_64-linux-gnu/libnspr4.so
+
+      - usr/lib/unifi/lib/native/Linux/aarch64/libubnt_sdnotify_jni.so
+      - usr/lib/unifi/lib/native/Linux/aarch64/libubnt_webrtc_jni.so
+
