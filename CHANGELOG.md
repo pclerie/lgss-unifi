@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## 0.5.0 - 2026-07-02
+#### Features
+- Update to Java 25 - (a5f539f) - Philippe Clérié
+#### Miscellaneous Chores
+- Exclude lint warnings about unused libraries - (55df350) - Philippe Clérié
+- Add metadata that may or may not be required - (1279053) - Philippe Clérié
+- Add metadata that may or may not be required - (0686165) - Philippe Clérié
+- Update source repository for controller - (10a28e4) - Local Administrator
+
+- - -
+
 ## 0.4.0 - 2025-08-03
 #### Features
 - Upgrade controller to 9.3.45.0 - (7d26204) - Philippe Clérié
